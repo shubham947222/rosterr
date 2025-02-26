@@ -68,7 +68,7 @@ const ProviderSchedule = ({
         return (
           <div
             key={provider.id}
-            className="flex flex-col md:flex-row items-center  p-4 gap-4"
+            className="flex flex-col md:flex-row items-center gap-2"
           >
             <div className="flex flex-col items-center md:items-start w-full md:w-1/4">
               <img
@@ -103,7 +103,7 @@ const ProviderSchedule = ({
               >
                 <LeftOutlined />
               </button>
-              <div className=" py-2 grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-4 gap-4 w-full">
+              <div className=" py-2 md:h-[200px] h-[380px] grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-4 gap-4 w-full">
                 {visibleSlots.map((time) => {
                   const type = getSlotType(time, provider.availabilities[0]);
                   const typeClasses = {
