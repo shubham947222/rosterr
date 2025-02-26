@@ -139,9 +139,9 @@ const ProviderCalendar = () => {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex flex-col md:flex-row h-screen bg-gray-100">
       {/* Sidebar */}
-      <div className="w-1/5 bg-white p-4 border-r">
+      <div className="md:w-1/5 w-full bg-white p-4 border-r">
         <h2 className="text-lg font-semibold mb-4">Providers</h2>
         <div className="space-y-2">
           {[1, 2, 3, 4].map((item, index) => (
@@ -158,7 +158,7 @@ const ProviderCalendar = () => {
       </div>
 
       {/* Main Calendar View */}
-      <div className="flex-1 p-4">
+      <div className="flex-1 w-full p-4">
         <div className="flex justify-between items-center mb-4">
           {/* Date Navigation */}
           <div className="flex items-center space-x-2">
@@ -166,7 +166,7 @@ const ProviderCalendar = () => {
             <Button onClick={handleNextClick}>→</Button>
             <span className="text-lg font-semibold">{currentDate}</span>
           </div>
-          <div className="flex items-center space-x-4 p-4 border rounded-lg bg-white shadow-md">
+          <div className="md:flex hidden items-center gap-2 p-2 border rounded-lmd bg-white shadow-md">
             {eventTypes.map((event) => (
               <div key={event.name} className="flex items-center space-x-2">
                 <span
