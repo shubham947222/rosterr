@@ -140,9 +140,7 @@ const Home = () => {
                 <Spin size="large" />
               </div>
             ) : filteredProviders && filteredProviders.length > 0 ? (
-              <Card>
                 <ProviderSchedule filteredProviders={filteredProviders} />
-              </Card>
             ) : (
               <Empty description="No providers found" />
             )}
